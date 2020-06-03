@@ -110,7 +110,9 @@ public class Projectile : MonoBehaviour
 
 	void UpdateEnemyList()
 	{
-		enemyList = GameObject.FindGameObjectsWithTag(seekTag);
+        if(seekTag != null && seekTag.Trim().Length > 0)
+		    enemyList = GameObject.FindGameObjectsWithTag(seekTag);
+
 		targetListUpdateTimer = 0.0f;
 	}
 
