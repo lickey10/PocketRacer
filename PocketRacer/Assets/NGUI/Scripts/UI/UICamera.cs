@@ -5,6 +5,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// This script should be attached to each camera that's used to draw the objects with
@@ -325,11 +326,15 @@ public class UICamera : MonoBehaviour
 
 	static public GameObject hoveredObject;
 
-	/// <summary>
-	/// Option to manually set the selected game object.
-	/// </summary>
+    //public GameObject ControllerHoverObject;
+    public ControllerHoverObject ControllerHoverObject;
+    private GameObject currentMenuItem;
 
-	static public GameObject selectedObject
+    /// <summary>
+    /// Option to manually set the selected game object.
+    /// </summary>
+
+    static public GameObject selectedObject
 	{
 		get
 		{
@@ -760,7 +765,7 @@ public class UICamera : MonoBehaviour
 
 		// If no event receiver mask was specified, use the camera's mask
 		if (eventReceiverMask == -1) eventReceiverMask = cachedCamera.cullingMask;
-	}
+    }
 
 	/// <summary>
 	/// Remove this camera from the list.
@@ -828,11 +833,11 @@ public class UICamera : MonoBehaviour
 		}
 		else inputHasFocus = false;
 
-		// Update the keyboard and joystick events
-		if (mSel != null) ProcessOthers();
+        // Update the keyboard and joystick events
+        if (mSel != null) ProcessOthers();
 
-		// If it's time to show a tooltip, inform the object we're hovering over
-		if (useMouse && mHover != null)
+        // If it's time to show a tooltip, inform the object we're hovering over
+        if (useMouse && mHover != null)
 		{
 			float scroll = Input.GetAxis(scrollAxisName);
 			if (scroll != 0f) Notify(mHover, "OnScroll", scroll);
@@ -844,7 +849,29 @@ public class UICamera : MonoBehaviour
 				ShowTooltip(true);
 			}
 		}
-		current = null;
+
+        if((useController || useKeyboard) && ControllerHoverObject)//scroll the menu if there is input
+        {
+            if (currentMenuItem && currentMenuItem != ControllerHoverObject.CurrentMenuItem)//we have moved to a new item - let the previous item know we have moved on
+                Notify(currentMenuItem, "OnHover", false);
+
+            Notify(ControllerHoverObject.CurrentMenuItem, "OnHover", true);
+            currentMenuItem = ControllerHoverObject.CurrentMenuItem;
+            
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis(horizontalAxisName) < 0)
+            {
+                Notify(ControllerHoverObject.CurrentMenuItem, "OnScroll", 0.1f);
+            }
+            else if (Input.GetKey(KeyCode.RightArrow) || Input.GetAxis(horizontalAxisName) > 0)
+            {
+                Notify(ControllerHoverObject.CurrentMenuItem, "OnScroll", -0.1f);
+            }
+
+            if(hinput.anyGamepad.buttons.Any(x => x.pressed) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                Notify(currentMenuItem, "OnClick", null);
+        }
+
+        current = null;
 	}
 
 	/// <summary>
@@ -1038,7 +1065,7 @@ public class UICamera : MonoBehaviour
 
 		if (useKeyboard)
 		{
-			if (inputHasFocus)
+            if (inputHasFocus)
 			{
 				vertical += GetDirection(KeyCode.UpArrow, KeyCode.DownArrow);
 				horizontal += GetDirection(KeyCode.RightArrow, KeyCode.LeftArrow);
