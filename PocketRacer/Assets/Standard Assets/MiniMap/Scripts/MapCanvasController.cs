@@ -97,7 +97,8 @@ public class MapCanvasController : MonoBehaviour
     {
         get
         {
-            return markerGroup;
+            //return markerGroup;
+            return GetComponentInChildren<MarkerGroup>();
         }
     }
     #endregion
@@ -118,7 +119,9 @@ public class MapCanvasController : MonoBehaviour
 
         if (!playerTransform)
         {
-            Debug.LogError("You must specify the player transform");
+            //Debug.LogError("You must specify the player transform");
+
+            playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
         }
 
         mapRect = GetComponent<RectTransform>();

@@ -5,7 +5,8 @@ using UnityEngine;
 public class CollisionHandler : MonoBehaviour
 {
     public GameObject CollisionPrefab;
-    public float CollisionPrefabScaleFactor = 2f;
+    public float CollisionPrefabScaleFactor = 1.5f;
+    public float HeightOffset = 1;
     public AudioClip CollisionSound;
 
     GameObject instantiatedCollisionPrefab;
@@ -26,7 +27,8 @@ public class CollisionHandler : MonoBehaviour
     {
         if ((collision.rigidbody == null || collision.transform.CompareTag("AI")) && instantiatedCollisionPrefab == null)
         {
-            instantiatedCollisionPrefab = Instantiate(CollisionPrefab, collision.contacts[0].point, Quaternion.identity);
+            Vector3 collisionLocation = new Vector3(collision.contacts[0].point.x, collision.contacts[0].point.y + HeightOffset, collision.contacts[0].point.z);
+            instantiatedCollisionPrefab = Instantiate(CollisionPrefab, collisionLocation, Quaternion.identity);
             instantiatedCollisionPrefab.transform.localScale = new Vector3(instantiatedCollisionPrefab.transform.localScale.x * CollisionPrefabScaleFactor, instantiatedCollisionPrefab.transform.localScale.y * CollisionPrefabScaleFactor, instantiatedCollisionPrefab.transform.localScale.z * CollisionPrefabScaleFactor);
         }
     }

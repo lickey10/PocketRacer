@@ -58,7 +58,7 @@ public class CustomTeleporter : MonoBehaviour
 		{
 			//if that object hasnt just arrived from another pad, teleport it
 			if(!arrived && teleportPadOn)
-			Teleport();
+			    Teleport();
 		}
 	}
 

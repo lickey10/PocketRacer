@@ -46,6 +46,10 @@ public class MapMarker : MonoBehaviour
         }
         GameObject markerImageObject = new GameObject("Marker");
         markerImageObject.AddComponent<Image>();
+
+        if (MapCanvasController.Instance == null)
+            return;
+
         MapCanvasController controller = MapCanvasController.Instance;
         if (!controller)
         {
