@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/_LoadingScreen.unity
+    guid: f1595334dc22e68478ea1789a13dae6f
+  - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: b0810a0f11e350d4e93e27a6f7cfbb2e
+  - enabled: 0
+    path: Assets/Scenes/CarSelection.unity
+    guid: 7fcf056acb8188b4cbf9ac4779501084
+  - enabled: 1
+    path: Assets/Scenes/CarSelection new.unity
+    guid: fffc9ab32af22fd41ad5f7cc4e1edcfa
+  - enabled: 1
+    path: Assets/Scenes/ControlsDisplay.unity
+    guid: 2addc5c200cb06f47b325e4a8f6bf89c
+  - enabled: 0
+    path: Assets/Scenes/ScenePowerUpDisplay.unity
+    guid: a8bbaed2d9de85d4fa2fa1165e8b96a3
   - enabled: 1
     path: Assets/Scenes/Classroom.unity
     guid: 46c41eb5f7964d14d830364852d54c9a

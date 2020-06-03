@@ -11,6 +11,9 @@ TagManager:
   - landmine
   - TrackWaypoint
   - RaceManager
+  - Car GO
+  - MenuBackground
+  - none
   layers:
   - Default
   - TransparentFX
