@@ -11,7 +11,7 @@ namespace VehicleBehaviour.Utils {
 	public class CameraFollow : MonoBehaviour {
 		[SerializeField] bool follow = false;
 		public bool Follow { get { return follow; } set { follow = value; } }
-		[SerializeField] Transform target;
+		[SerializeField] public Transform target;
 		[SerializeField] Transform[] targets;
 		[SerializeField] public Vector3 offset;
 		[Range(0, 10)]
@@ -30,7 +30,7 @@ namespace VehicleBehaviour.Utils {
 		}
 
 		void FixedUpdate() {
-			if (!follow) return;
+			if (!follow || !target) return;
 
 			this.rb.velocity.Normalize();
 
