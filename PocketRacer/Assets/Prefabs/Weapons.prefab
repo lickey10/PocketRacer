@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004790243378665809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25930497, y: 0.23983812, z: -0.07281321}
+  m_LocalPosition: {x: 0.01, y: 0.23983812, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6004790243379023177}
@@ -114,8 +114,10 @@ MonoBehaviour:
   weaponType: 0
   auto: 0
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378674127}
-  raycastStartSpot: {fileID: 6004790243379023231}
+  weaponModel: {fileID: 5990535831524181047, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523700871, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   delayBeforeFire: 0
   warmup: 0
   maxWarmup: 2
@@ -125,7 +127,8 @@ MonoBehaviour:
   initialForceMultiplier: 1
   allowCancel: 0
   projectile: {fileID: 100000, guid: d3a25643c46f69d43aaceefab39dabb6, type: 3}
-  projectileSpawnSpot: {fileID: 6004790243379023227}
+  projectileSpawnSpot: {fileID: 5990535831523700867, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   reflect: 1
   reflectionMaterial: {fileID: 0}
   maxReflections: 5
@@ -165,11 +168,13 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 0
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379023225}
+  shellSpitPosition: {fileID: 5990535831523700865, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 1
   muzzleEffects:
   - {fileID: 100002, guid: e840492206edf364baccc15150e2cc63, type: 3}
-  muzzleEffectsPosition: {fileID: 6004790243379023227}
+  muzzleEffectsPosition: {fileID: 5990535831523700867, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeHitEffects: 1
   hitEffects:
   - {fileID: 100002, guid: 0c631565793959f47a2464ec266aca7c, type: 3}
@@ -428,8 +433,10 @@ MonoBehaviour:
   weaponType: 0
   auto: 0
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378782309}
-  raycastStartSpot: {fileID: 6004790243379023175}
+  weaponModel: {fileID: 5990535831523974557, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523700927, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   delayBeforeFire: 0
   warmup: 0
   maxWarmup: 2
@@ -439,7 +446,8 @@ MonoBehaviour:
   initialForceMultiplier: 1
   allowCancel: 0
   projectile: {fileID: 0}
-  projectileSpawnSpot: {fileID: 6004790243379023175}
+  projectileSpawnSpot: {fileID: 5990535831523700927, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   reflect: 1
   reflectionMaterial: {fileID: 0}
   maxReflections: 5
@@ -479,11 +487,13 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 0
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379023173}
+  shellSpitPosition: {fileID: 5990535831523700925, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 1
   muzzleEffects:
   - {fileID: 100002, guid: d5357f6ddf8aded4bb3b35abbbbd0f61, type: 3}
-  muzzleEffectsPosition: {fileID: 6004790243379023175}
+  muzzleEffectsPosition: {fileID: 5990535831523700927, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeHitEffects: 1
   hitEffects:
   - {fileID: 100000, guid: 21c587be1a1d1914c99c2a982d5ead8d, type: 3}
@@ -676,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6004790243379023177
 Transform:
   m_ObjectHideFlags: 0
@@ -685,7 +695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004790243378666153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.259, y: -0.182, z: 0.762}
+  m_LocalPosition: {x: 0.077, y: -0.968, z: 2.642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6004790243379023183}
@@ -711,10 +721,12 @@ MonoBehaviour:
   shooterAIEnabled: 0
   bloodyMessEnabled: 0
   weaponType: 0
-  auto: 0
+  auto: 1
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378782315}
-  raycastStartSpot: {fileID: 6004790243379023217}
+  weaponModel: {fileID: 5990535831523974547, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523700873, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   delayBeforeFire: 0
   warmup: 0
   maxWarmup: 2
@@ -740,7 +752,7 @@ MonoBehaviour:
   beamPower: 1
   range: 9999
   rateOfFire: 3.5
-  infiniteAmmo: 0
+  infiniteAmmo: 1
   ammoCapacity: 16
   shotPerRound: 1
   reloadTime: 1.6
@@ -751,7 +763,7 @@ MonoBehaviour:
   accuracyRecoverRate: 0.008
   burstRate: 3
   burstPause: 0
-  recoil: 1
+  recoil: 0
   recoilKickBackMin: 0.4
   recoilKickBackMax: 0.5
   recoilRotationMin: 5
@@ -764,7 +776,8 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 0
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379023219}
+  shellSpitPosition: {fileID: 5990535831523700875, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 1
   muzzleEffects:
   - {fileID: 100002, guid: c109a314fe7c44240a4b14cc569cb261, type: 3}
@@ -779,7 +792,7 @@ MonoBehaviour:
   bulletHoleGroups: []
   defaultBulletHoles: []
   bulletHoleExceptions: []
-  showCrosshair: 1
+  showCrosshair: 0
   crosshairTexture: {fileID: 2800000, guid: b4c5e19a5662ed244b54f15320c9fb31, type: 3}
   crosshairLength: 16
   crosshairWidth: 4
@@ -1624,8 +1637,10 @@ MonoBehaviour:
   weaponType: 0
   auto: 1
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378725665}
-  raycastStartSpot: {fileID: 6004790243379083065}
+  weaponModel: {fileID: 5990535831523999449, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523805889, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   delayBeforeFire: 0
   warmup: 0
   maxWarmup: 2
@@ -1635,7 +1650,8 @@ MonoBehaviour:
   initialForceMultiplier: 1
   allowCancel: 0
   projectile: {fileID: 0}
-  projectileSpawnSpot: {fileID: 6004790243379083053}
+  projectileSpawnSpot: {fileID: 5990535831523805909, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   reflect: 1
   reflectionMaterial: {fileID: 0}
   maxReflections: 5
@@ -1675,11 +1691,13 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 5
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379083211}
+  shellSpitPosition: {fileID: 5990535831523805747, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 0
   muzzleEffects:
   - {fileID: 100002, guid: e840492206edf364baccc15150e2cc63, type: 3}
-  muzzleEffectsPosition: {fileID: 6004790243379083053}
+  muzzleEffectsPosition: {fileID: 5990535831523805909, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeHitEffects: 1
   hitEffects:
   - {fileID: 100002, guid: 0c631565793959f47a2464ec266aca7c, type: 3}
@@ -1908,9 +1926,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004790243378725663}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.149, y: 0.528, z: 0.215}
-  m_LocalScale: {x: 0.9000008, y: 0.9, z: 0.9000008}
+  m_LocalScale: {x: 0.90000105, y: 0.9, z: 0.90000105}
   m_Children:
   - {fileID: 6004790243379083205}
   - {fileID: 6004790243379083229}
@@ -1936,15 +1954,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 6004790243378725659}
-  - {fileID: 6004790243378725669}
-  - {fileID: 6004790243378725693}
-  - {fileID: 6004790243378725667}
-  - {fileID: 6004790243378665815}
-  - {fileID: 6004790243378666147}
-  - {fileID: 6004790243378666153}
-  - {fileID: 6004790243378739309}
-  startingWeaponIndex: 7
+  - {fileID: 5990535831523999459, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  - {fileID: 5990535831523999453, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  - {fileID: 5990535831523999429, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  - {fileID: 5990535831523999451, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  - {fileID: 5990535831524189359, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  - {fileID: 5990535831524190043, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  - {fileID: 5990535831524190033, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  - {fileID: 5990535831523984789, guid: 7edea385b3f574ef08113b2349548d3d, type: 3}
+  startingWeaponIndex: 6
 --- !u!1 &6004790243378725665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,8 +2094,10 @@ MonoBehaviour:
   weaponType: 0
   auto: 1
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378725653}
-  raycastStartSpot: {fileID: 6004790243379083051}
+  weaponModel: {fileID: 5990535831523999469, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523805907, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   delayBeforeFire: 0
   warmup: 1
   maxWarmup: 1.5
@@ -2087,7 +2107,8 @@ MonoBehaviour:
   initialForceMultiplier: 3
   allowCancel: 1
   projectile: {fileID: 100008, guid: a4b44abdbd241fa4faf6f507cff9873c, type: 3}
-  projectileSpawnSpot: {fileID: 6004790243379083227}
+  projectileSpawnSpot: {fileID: 5990535831523805731, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   reflect: 1
   reflectionMaterial: {fileID: 0}
   maxReflections: 5
@@ -2127,11 +2148,13 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 5
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379083221}
+  shellSpitPosition: {fileID: 5990535831523805741, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 0
   muzzleEffects:
   - {fileID: 100002, guid: e840492206edf364baccc15150e2cc63, type: 3}
-  muzzleEffectsPosition: {fileID: 6004790243379083227}
+  muzzleEffectsPosition: {fileID: 5990535831523805731, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeHitEffects: 0
   hitEffects:
   - {fileID: 100002, guid: 0c631565793959f47a2464ec266aca7c, type: 3}
@@ -2300,8 +2323,10 @@ MonoBehaviour:
   weaponType: 0
   auto: 0
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378725681}
-  raycastStartSpot: {fileID: 6004790243379083225}
+  weaponModel: {fileID: 5990535831523999433, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523805729, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   delayBeforeFire: 0
   warmup: 0
   maxWarmup: 2
@@ -2311,7 +2336,8 @@ MonoBehaviour:
   initialForceMultiplier: 1
   allowCancel: 0
   projectile: {fileID: 0}
-  projectileSpawnSpot: {fileID: 6004790243379083209}
+  projectileSpawnSpot: {fileID: 5990535831523805745, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   reflect: 1
   reflectionMaterial: {fileID: 0}
   maxReflections: 5
@@ -2351,11 +2377,13 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 0
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379083055}
+  shellSpitPosition: {fileID: 5990535831523805911, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 1
   muzzleEffects:
   - {fileID: 100002, guid: e840492206edf364baccc15150e2cc63, type: 3}
-  muzzleEffectsPosition: {fileID: 6004790243379083209}
+  muzzleEffectsPosition: {fileID: 5990535831523805745, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeHitEffects: 1
   hitEffects:
   - {fileID: 100002, guid: 0c631565793959f47a2464ec266aca7c, type: 3}
@@ -2891,8 +2919,10 @@ MonoBehaviour:
   weaponType: 0
   auto: 1
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378725635}
-  raycastStartSpot: {fileID: 6004790243379083219}
+  weaponModel: {fileID: 5990535831523999483, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523805739, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   delayBeforeFire: 0
   warmup: 0
   maxWarmup: 2
@@ -2902,7 +2932,8 @@ MonoBehaviour:
   initialForceMultiplier: 1
   allowCancel: 0
   projectile: {fileID: 0}
-  projectileSpawnSpot: {fileID: 6004790243379083047}
+  projectileSpawnSpot: {fileID: 5990535831523805919, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   reflect: 1
   reflectionMaterial: {fileID: 0}
   maxReflections: 5
@@ -2942,11 +2973,13 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 5
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379083069}
+  shellSpitPosition: {fileID: 5990535831523805893, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 1
   muzzleEffects:
   - {fileID: 100002, guid: e840492206edf364baccc15150e2cc63, type: 3}
-  muzzleEffectsPosition: {fileID: 6004790243379083047}
+  muzzleEffectsPosition: {fileID: 5990535831523805919, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeHitEffects: 1
   hitEffects:
   - {fileID: 100002, guid: 0c631565793959f47a2464ec266aca7c, type: 3}
@@ -3145,7 +3178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004790243378739219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.092068374, y: 0.06674206, z: 0.18787694}
+  m_LocalPosition: {x: 0.092, y: 0.098, z: 0.772}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6004790243379096589}
@@ -3205,7 +3238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004790243378739223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25930497, y: 0.23983812, z: -0.07281321}
+  m_LocalPosition: {x: -0.26, y: 0.23983812, z: 0.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6004790243379096589}
@@ -3228,7 +3261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6004790243379096589
 Transform:
   m_ObjectHideFlags: 0
@@ -3237,7 +3270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004790243378739309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.252, y: -0.209, z: 0.915}
+  m_LocalPosition: {x: 0.077, y: -0.968, z: 3.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6004790243379096629}
@@ -3265,9 +3298,11 @@ MonoBehaviour:
   weaponType: 0
   auto: 0
   playerWeapon: 1
-  weaponModel: {fileID: 6004790243378782313}
-  raycastStartSpot: {fileID: 6004790243379096631}
-  delayBeforeFire: 0
+  weaponModel: {fileID: 5990535831523974545, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  raycastStartSpot: {fileID: 5990535831523758543, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
+  delayBeforeFire: 1
   warmup: 0
   maxWarmup: 2
   multiplyForce: 1
@@ -3275,8 +3310,9 @@ MonoBehaviour:
   powerMultiplier: 1
   initialForceMultiplier: 1
   allowCancel: 0
-  projectile: {fileID: 100000, guid: fcc1766e5afd10342b2670b24b98c209, type: 3}
-  projectileSpawnSpot: {fileID: 6004790243379096629}
+  projectile: {fileID: 100000, guid: f7fa307d2a2e4d242959c129e7ddb14c, type: 3}
+  projectileSpawnSpot: {fileID: 5990535831523758541, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   reflect: 1
   reflectionMaterial: {fileID: 0}
   maxReflections: 5
@@ -3292,18 +3328,18 @@ MonoBehaviour:
   beamPower: 1
   range: 9999
   rateOfFire: 2
-  infiniteAmmo: 0
-  ammoCapacity: 6
+  infiniteAmmo: 1
+  ammoCapacity: 3
   shotPerRound: 1
-  reloadTime: 2.4
+  reloadTime: 0.1
   showCurrentAmmo: 1
-  reloadAutomatically: 1
+  reloadAutomatically: 0
   accuracy: 90
   accuracyDropPerShot: 8
   accuracyRecoverRate: 0.008
   burstRate: 3
   burstPause: 0
-  recoil: 1
+  recoil: 0
   recoilKickBackMin: 0.4
   recoilKickBackMax: 0.5
   recoilRotationMin: 5
@@ -3316,11 +3352,13 @@ MonoBehaviour:
   shellSpitTorqueX: 0
   shellSpitTorqueY: 0
   shellTorqueRandom: 1
-  shellSpitPosition: {fileID: 6004790243379096627}
+  shellSpitPosition: {fileID: 5990535831523758539, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeMuzzleEffects: 1
   muzzleEffects:
   - {fileID: 100002, guid: e840492206edf364baccc15150e2cc63, type: 3}
-  muzzleEffectsPosition: {fileID: 6004790243379096629}
+  muzzleEffectsPosition: {fileID: 5990535831523758541, guid: 7edea385b3f574ef08113b2349548d3d,
+    type: 3}
   makeHitEffects: 1
   hitEffects:
   - {fileID: 100002, guid: 0c631565793959f47a2464ec266aca7c, type: 3}
@@ -3559,7 +3597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004790243378782313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.000000059604645, z: 0}
+  m_LocalPosition: {x: -0, y: 0.27, z: 1.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6004790243379096589}
@@ -3647,7 +3685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6004790243379008523
 Transform:
   m_ObjectHideFlags: 0
