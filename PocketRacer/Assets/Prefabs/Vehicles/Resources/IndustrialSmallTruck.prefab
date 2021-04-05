@@ -54,6 +54,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -65,6 +66,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -131,6 +133,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -142,6 +145,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -675,6 +679,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -686,6 +691,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -752,6 +758,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -763,6 +770,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -829,6 +837,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -840,6 +849,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2310,6 +2320,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
+    serializedVersion: 2
     enabled: 1
     mode: 1
     timeMode: 0
@@ -2427,7 +2438,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    randomRow: 1
+    rowMode: 1
     sprites:
     - sprite: {fileID: 21300000, guid: 6c31ebde8e96946b6a6d6ef4ac2991b1, type: 3}
     - sprite: {fileID: 21300000, guid: 88dc4fc0715d6485b93f3df55945aac3, type: 3}
@@ -3243,8 +3254,61 @@ ParticleSystem:
     inWorldSpace: 0
     randomizePerFrame: 0
   ExternalForcesModule:
+    serializedVersion: 2
     enabled: 0
-    multiplier: 1
+    multiplierCurve:
+      serializedVersion: 2
+      minMaxState: 0
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
     influenceFilter: 0
     influenceMask:
       serializedVersion: 2
@@ -5594,7 +5658,7 @@ ParticleSystem:
 --- !u!199 &9121
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5606,6 +5670,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -5618,6 +5683,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5707,6 +5773,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -5719,6 +5786,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7091,6 +7159,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
+    serializedVersion: 2
     enabled: 1
     mode: 1
     timeMode: 0
@@ -7208,7 +7277,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    randomRow: 1
+    rowMode: 1
     sprites:
     - sprite: {fileID: 21300000, guid: 4da7ae0e024f749aea14c44c3fd6f842, type: 3}
     - sprite: {fileID: 21300000, guid: 8992eba4746ad41ba89d2b10237d97dd, type: 3}
@@ -8024,8 +8093,61 @@ ParticleSystem:
     inWorldSpace: 0
     randomizePerFrame: 0
   ExternalForcesModule:
+    serializedVersion: 2
     enabled: 0
-    multiplier: 1
+    multiplierCurve:
+      serializedVersion: 2
+      minMaxState: 0
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
     influenceFilter: 0
     influenceMask:
       serializedVersion: 2
@@ -10375,7 +10497,7 @@ ParticleSystem:
 --- !u!199 &9122
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10387,6 +10509,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -10399,6 +10522,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10488,6 +10612,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -10500,6 +10625,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10596,6 +10722,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -10608,6 +10735,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10870,6 +10998,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -10882,6 +11011,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -12254,6 +12384,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
+    serializedVersion: 2
     enabled: 1
     mode: 1
     timeMode: 0
@@ -12371,7 +12502,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    randomRow: 1
+    rowMode: 1
     sprites:
     - sprite: {fileID: 21300000, guid: 4da7ae0e024f749aea14c44c3fd6f842, type: 3}
     - sprite: {fileID: 21300000, guid: 8992eba4746ad41ba89d2b10237d97dd, type: 3}
@@ -13187,8 +13318,61 @@ ParticleSystem:
     inWorldSpace: 0
     randomizePerFrame: 0
   ExternalForcesModule:
+    serializedVersion: 2
     enabled: 0
-    multiplier: 1
+    multiplierCurve:
+      serializedVersion: 2
+      minMaxState: 0
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
     influenceFilter: 0
     influenceMask:
       serializedVersion: 2
@@ -15538,7 +15722,7 @@ ParticleSystem:
 --- !u!199 &9123
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -15550,6 +15734,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -15562,6 +15747,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -16957,6 +17143,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
+    serializedVersion: 2
     enabled: 1
     mode: 1
     timeMode: 0
@@ -17074,7 +17261,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    randomRow: 1
+    rowMode: 1
     sprites:
     - sprite: {fileID: 21300000, guid: 6c31ebde8e96946b6a6d6ef4ac2991b1, type: 3}
     - sprite: {fileID: 21300000, guid: 88dc4fc0715d6485b93f3df55945aac3, type: 3}
@@ -17890,8 +18077,61 @@ ParticleSystem:
     inWorldSpace: 0
     randomizePerFrame: 0
   ExternalForcesModule:
+    serializedVersion: 2
     enabled: 0
-    multiplier: 1
+    multiplierCurve:
+      serializedVersion: 2
+      minMaxState: 0
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
     influenceFilter: 0
     influenceMask:
       serializedVersion: 2
@@ -20241,7 +20481,7 @@ ParticleSystem:
 --- !u!199 &9124
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20253,6 +20493,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -20265,6 +20506,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -20466,10 +20708,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3943}
     m_Modifications:
+    - target: {fileID: 6004790243378666153, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6004790243378725663, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
         type: 3}
       propertyPath: m_Name
       value: Weapons
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243378739309, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008521, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008521, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008521, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14731367
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.19265203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.029301383
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.96970373
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 257.6982
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0491042
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 175.46382
       objectReference: {fileID: 0}
     - target: {fileID: 6004790243379083071, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
         type: 3}
@@ -20541,6 +20843,181 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.69
       objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379096627, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.092
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379096627, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.098
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379096627, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379096631, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243379096631, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: weaponModel
+      value: 
+      objectReference: {fileID: 5990535831523974547}
+    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: raycastStartSpot
+      value: 
+      objectReference: {fileID: 5990535831523700873}
+    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: projectileSpawnSpot
+      value: 
+      objectReference: {fileID: 5990535831523700919}
+    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: shellSpitPosition
+      value: 
+      objectReference: {fileID: 5990535831523700875}
+    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: muzzleEffectsPosition
+      value: 
+      objectReference: {fileID: 5990535831523700919}
+    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: weaponModel
+      value: 
+      objectReference: {fileID: 5990535831523974557}
+    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: raycastStartSpot
+      value: 
+      objectReference: {fileID: 5990535831523700927}
+    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: projectileSpawnSpot
+      value: 
+      objectReference: {fileID: 5990535831523700927}
+    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: shellSpitPosition
+      value: 
+      objectReference: {fileID: 5990535831523700925}
+    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: muzzleEffectsPosition
+      value: 
+      objectReference: {fileID: 5990535831523700927}
+    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: weaponModel
+      value: 
+      objectReference: {fileID: 5990535831524181047}
+    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: raycastStartSpot
+      value: 
+      objectReference: {fileID: 5990535831523700871}
+    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: projectileSpawnSpot
+      value: 
+      objectReference: {fileID: 5990535831523700867}
+    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: shellSpitPosition
+      value: 
+      objectReference: {fileID: 5990535831523700865}
+    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: muzzleEffectsPosition
+      value: 
+      objectReference: {fileID: 5990535831523700867}
+    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: weaponModel
+      value: 
+      objectReference: {fileID: 5990535831523999469}
+    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: raycastStartSpot
+      value: 
+      objectReference: {fileID: 5990535831523805907}
+    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: projectileSpawnSpot
+      value: 
+      objectReference: {fileID: 5990535831523805731}
+    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: shellSpitPosition
+      value: 
+      objectReference: {fileID: 5990535831523805741}
+    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: muzzleEffectsPosition
+      value: 
+      objectReference: {fileID: 5990535831523805731}
+    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: weaponModel
+      value: 
+      objectReference: {fileID: 5990535831523999483}
+    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: raycastStartSpot
+      value: 
+      objectReference: {fileID: 5990535831523805739}
+    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: projectileSpawnSpot
+      value: 
+      objectReference: {fileID: 5990535831523805919}
+    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: shellSpitPosition
+      value: 
+      objectReference: {fileID: 5990535831523805893}
+    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: muzzleEffectsPosition
+      value: 
+      objectReference: {fileID: 5990535831523805919}
+    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: weaponModel
+      value: 
+      objectReference: {fileID: 5990535831523999433}
+    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: raycastStartSpot
+      value: 
+      objectReference: {fileID: 5990535831523805729}
+    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: projectileSpawnSpot
+      value: 
+      objectReference: {fileID: 5990535831523805745}
+    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: shellSpitPosition
+      value: 
+      objectReference: {fileID: 5990535831523805911}
+    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
+        type: 3}
+      propertyPath: muzzleEffectsPosition
+      value: 
+      objectReference: {fileID: 5990535831523805745}
     - target: {fileID: 6004790243390099613, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
         type: 3}
       propertyPath: weapons.Array.data[0]
@@ -20581,241 +21058,6 @@ PrefabInstance:
       propertyPath: weapons.Array.data[7]
       value: 
       objectReference: {fileID: 5990535831523984789}
-    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.14731367
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.19265203
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.029301383
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.96970373
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 257.6982
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.0491042
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008523, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 175.46382
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008521, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008521, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379008521, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379096627, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.092
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379096627, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.098
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379096627, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.772
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379096631, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243379096631, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243378739309, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243378666153, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: weaponModel
-      value: 
-      objectReference: {fileID: 5990535831523974557}
-    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: raycastStartSpot
-      value: 
-      objectReference: {fileID: 5990535831523700927}
-    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: projectileSpawnSpot
-      value: 
-      objectReference: {fileID: 5990535831523700927}
-    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: shellSpitPosition
-      value: 
-      objectReference: {fileID: 5990535831523700925}
-    - target: {fileID: 6004790243390043707, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: muzzleEffectsPosition
-      value: 
-      objectReference: {fileID: 5990535831523700927}
-    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: weaponModel
-      value: 
-      objectReference: {fileID: 5990535831523974547}
-    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: raycastStartSpot
-      value: 
-      objectReference: {fileID: 5990535831523700873}
-    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: projectileSpawnSpot
-      value: 
-      objectReference: {fileID: 5990535831523700919}
-    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: shellSpitPosition
-      value: 
-      objectReference: {fileID: 5990535831523700875}
-    - target: {fileID: 6004790243390043705, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: muzzleEffectsPosition
-      value: 
-      objectReference: {fileID: 5990535831523700919}
-    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: weaponModel
-      value: 
-      objectReference: {fileID: 5990535831524181047}
-    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: raycastStartSpot
-      value: 
-      objectReference: {fileID: 5990535831523700871}
-    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: projectileSpawnSpot
-      value: 
-      objectReference: {fileID: 5990535831523700867}
-    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: shellSpitPosition
-      value: 
-      objectReference: {fileID: 5990535831523700865}
-    - target: {fileID: 6004790243390043711, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: muzzleEffectsPosition
-      value: 
-      objectReference: {fileID: 5990535831523700867}
-    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: weaponModel
-      value: 
-      objectReference: {fileID: 5990535831523999483}
-    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: raycastStartSpot
-      value: 
-      objectReference: {fileID: 5990535831523805739}
-    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: projectileSpawnSpot
-      value: 
-      objectReference: {fileID: 5990535831523805919}
-    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: shellSpitPosition
-      value: 
-      objectReference: {fileID: 5990535831523805893}
-    - target: {fileID: 6004790243390099591, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: muzzleEffectsPosition
-      value: 
-      objectReference: {fileID: 5990535831523805919}
-    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: weaponModel
-      value: 
-      objectReference: {fileID: 5990535831523999469}
-    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: raycastStartSpot
-      value: 
-      objectReference: {fileID: 5990535831523805907}
-    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: projectileSpawnSpot
-      value: 
-      objectReference: {fileID: 5990535831523805731}
-    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: shellSpitPosition
-      value: 
-      objectReference: {fileID: 5990535831523805741}
-    - target: {fileID: 6004790243390099589, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: muzzleEffectsPosition
-      value: 
-      objectReference: {fileID: 5990535831523805731}
-    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: weaponModel
-      value: 
-      objectReference: {fileID: 5990535831523999433}
-    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: raycastStartSpot
-      value: 
-      objectReference: {fileID: 5990535831523805729}
-    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: projectileSpawnSpot
-      value: 
-      objectReference: {fileID: 5990535831523805745}
-    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: shellSpitPosition
-      value: 
-      objectReference: {fileID: 5990535831523805911}
-    - target: {fileID: 6004790243390099595, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
-        type: 3}
-      propertyPath: muzzleEffectsPosition
-      value: 
-      objectReference: {fileID: 5990535831523805745}
     - target: {fileID: 6004790243390099615, guid: 3bbc3b68bfd7b7d43b5df9c7e8c89c9f,
         type: 3}
       propertyPath: weaponModel
@@ -21210,6 +21452,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8659229071122506666, guid: 65a59e48e4315434baa46817d96023f6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659229071122506666, guid: 65a59e48e4315434baa46817d96023f6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.459
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659229071211969833, guid: 65a59e48e4315434baa46817d96023f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8659229071943827256, guid: 65a59e48e4315434baa46817d96023f6,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -21239,21 +21496,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.056
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659229071122506666, guid: 65a59e48e4315434baa46817d96023f6,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659229071122506666, guid: 65a59e48e4315434baa46817d96023f6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.459
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659229071211969833, guid: 65a59e48e4315434baa46817d96023f6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a59e48e4315434baa46817d96023f6, type: 3}

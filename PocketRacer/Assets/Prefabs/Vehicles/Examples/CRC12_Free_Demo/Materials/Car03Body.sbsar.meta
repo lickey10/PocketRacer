@@ -1,12 +1,21 @@
 fileFormatVersion: 2
 guid: ad9464082a0ed7c43b81ca6efdde435e
 ScriptedImporter:
-  fileIDToRecycleName:
-    2100000: Car03Body
-    2800000: Car03Body - diffuse
-    11400000: sbsar
-    11400002: graph0
+  internalIDToNameTable:
+  - first:
+      21: 2100000
+    second: Car03Body
+  - first:
+      28: 2800000
+    second: Car03Body - diffuse
+  - first:
+      114: 11400000
+    second: sbsar
+  - first:
+      114: 11400002
+    second: graph0
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
